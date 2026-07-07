@@ -29,9 +29,7 @@
             --success: #10B981;
             --glass: rgba(13, 20, 36, 0.7);
         }
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
         body {
             font-family: 'Tajawal', sans-serif;
             background: var(--bg);
@@ -39,12 +37,10 @@
             min-height: 100vh;
             overflow-x: hidden;
         }
-
         #particles-canvas {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             z-index: 0; pointer-events: none;
         }
-
         .bg-mesh {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             z-index: 0; pointer-events: none;
@@ -53,30 +49,25 @@
                 radial-gradient(ellipse 500px 500px at 80% 80%, rgba(232,185,49,0.05) 0%, transparent 70%),
                 radial-gradient(ellipse 800px 300px at 50% 50%, rgba(13,155,118,0.03) 0%, transparent 70%);
         }
-
         .screen {
             display: none; position: relative; z-index: 10;
             min-height: 100vh; animation: screenFadeIn 0.5s ease-out;
         }
         .screen.active { display: flex; }
-
         @keyframes screenFadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
         .glass-card {
             background: var(--glass); backdrop-filter: blur(20px);
             border: 1px solid var(--border); border-radius: 16px; transition: all 0.3s ease;
         }
         .glass-card:hover { border-color: rgba(255,255,255,0.1); box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
-
         .glass-card-accent {
             background: var(--glass); backdrop-filter: blur(20px);
             border: 1px solid var(--border-accent); border-radius: 16px; transition: all 0.3s ease;
         }
         .glass-card-accent:hover { border-color: rgba(232,185,49,0.35); box-shadow: 0 8px 32px rgba(232,185,49,0.08); }
-
         .btn-primary {
             background: linear-gradient(135deg, var(--primary), var(--primary-dark));
             color: white; padding: 12px 28px; border-radius: 12px; border: none;
@@ -92,7 +83,6 @@
         .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(13,155,118,0.35); }
         .btn-primary:active { transform: translateY(0); }
         .btn-primary:disabled { opacity: 0.6; cursor: not-allowed; transform: none !important; }
-
         .btn-accent {
             background: linear-gradient(135deg, var(--accent), var(--accent-dark));
             color: #0A0F1A; padding: 12px 28px; border-radius: 12px; border: none;
@@ -100,7 +90,6 @@
             cursor: pointer; transition: all 0.3s ease;
         }
         .btn-accent:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(232,185,49,0.35); }
-
         .btn-outline {
             background: transparent; color: var(--text); padding: 12px 28px;
             border-radius: 12px; border: 1px solid var(--border);
@@ -108,7 +97,6 @@
             cursor: pointer; transition: all 0.3s ease;
         }
         .btn-outline:hover { border-color: var(--primary); color: var(--primary-light); background: rgba(13,155,118,0.05); }
-
         .btn-danger {
             background: linear-gradient(135deg, var(--danger), var(--danger-dark));
             color: white; padding: 8px 16px; border-radius: 10px; border: none;
@@ -116,9 +104,7 @@
             cursor: pointer; transition: all 0.3s ease;
         }
         .btn-danger:hover { transform: translateY(-1px); box-shadow: 0 4px 15px rgba(239,68,68,0.3); }
-
         .btn-sm { padding: 8px 18px; font-size: 14px; border-radius: 10px; }
-
         .input-field {
             width: 100%; background: rgba(7,11,20,0.6); border: 1px solid var(--border);
             border-radius: 12px; padding: 14px 18px; color: var(--text);
@@ -127,7 +113,6 @@
         }
         .input-field:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(13,155,118,0.15); }
         .input-field::placeholder { color: var(--muted); }
-
         .file-drop-zone {
             border: 2px dashed var(--border); border-radius: 16px; padding: 40px 20px;
             text-align: center; cursor: pointer; transition: all 0.3s ease;
@@ -135,7 +120,6 @@
         }
         .file-drop-zone:hover, .file-drop-zone.drag-over { border-color: var(--primary); background: rgba(13,155,118,0.05); }
         .file-drop-zone.has-file { border-color: var(--accent); background: rgba(232,185,49,0.05); }
-
         .data-table { width: 100%; border-collapse: separate; border-spacing: 0; }
         .data-table thead th {
             background: rgba(13,155,118,0.1); padding: 14px 16px; text-align: right;
@@ -146,7 +130,6 @@
         .data-table tbody tr { transition: background 0.2s ease; }
         .data-table tbody tr:hover { background: rgba(255,255,255,0.02); }
         .data-table tbody td { padding: 14px 16px; border-bottom: 1px solid var(--border); font-size: 15px; }
-
         .toast-container {
             position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
             z-index: 9999; display: flex; flex-direction: column-reverse; gap: 10px; pointer-events: none;
@@ -155,31 +138,27 @@
             padding: 14px 24px; border-radius: 12px; font-weight: 600; font-size: 15px;
             pointer-events: auto; animation: toastIn 0.4s ease-out; backdrop-filter: blur(20px);
             display: flex; align-items: center; gap: 10px; min-width: 300px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.4); max-width: 500px;
         }
         .toast.success { background: rgba(16,185,129,0.15); border: 1px solid rgba(16,185,129,0.3); color: #6EE7B7; }
         .toast.error { background: rgba(239,68,68,0.15); border: 1px solid rgba(239,68,68,0.3); color: #FCA5A5; }
         .toast.info { background: rgba(232,185,49,0.15); border: 1px solid rgba(232,185,49,0.3); color: #FDE68A; }
         .toast.removing { animation: toastOut 0.3s ease-in forwards; }
         @keyframes toastIn { from { opacity:0; transform: translateY(30px) scale(0.95); } to { opacity:1; transform: translateY(0) scale(1); } }
-        @keyframes toastOut { from { opacity:1; transform: translateY(0) scale(1); } to { opacity:0; transform: translateY(30px) scale(0.95); } }
-
+        @keyframes toastOut { from { opacity:1; } to { opacity:0; transform: translateY(30px); } }
         .spinner { width: 20px; height: 20px; border: 2.5px solid rgba(255,255,255,0.2); border-top-color: white; border-radius: 50%; animation: spin 0.7s linear infinite; display: inline-block; }
         @keyframes spin { to { transform: rotate(360deg); } }
-
         .loading-overlay {
             position: fixed; inset: 0; background: rgba(7,11,20,0.85); backdrop-filter: blur(8px);
             z-index: 1000; display: none; align-items: center; justify-content: center; flex-direction: column; gap: 20px;
         }
         .loading-overlay.active { display: flex; }
         .loading-spinner { width: 50px; height: 50px; border: 3px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.8s linear infinite; }
-
         .certificate-frame {
             background: linear-gradient(145deg, #FFFDF5, #FFF8E7); border-radius: 8px; padding: 6px;
             box-shadow: 0 0 0 2px var(--accent-dark), 0 0 0 6px #FFFDF5, 0 0 0 8px var(--accent), 0 20px 60px rgba(0,0,0,0.4);
         }
         .certificate-inner { border: 2px solid var(--accent-dark); border-radius: 4px; padding: 15px; text-align: center; }
-
         .navbar {
             background: rgba(7,11,20,0.9); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border);
             padding: 0 32px; height: 70px; display: flex; align-items: center; justify-content: space-between;
@@ -190,7 +169,6 @@
             width: 40px; height: 40px; background: linear-gradient(135deg, var(--primary), var(--accent));
             border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; color: white;
         }
-
         .stat-card {
             padding: 24px; border-radius: 16px; background: var(--glass); backdrop-filter: blur(20px);
             border: 1px solid var(--border); transition: all 0.3s ease;
@@ -199,7 +177,6 @@
         .stat-icon { width: 50px; height: 50px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 16px; }
         .stat-number { font-size: 32px; font-weight: 900; line-height: 1; margin-bottom: 6px; }
         .stat-label { font-size: 14px; color: var(--text-secondary); font-weight: 500; }
-
         .modal-overlay {
             position: fixed; inset: 0; background: rgba(7,11,20,0.85); backdrop-filter: blur(8px);
             z-index: 500; display: none; align-items: center; justify-content: center; padding: 20px;
@@ -210,21 +187,17 @@
             padding: 32px; max-width: 500px; width: 100%; animation: modalIn 0.3s ease-out;
         }
         @keyframes modalIn { from { opacity:0; transform: scale(0.95) translateY(10px); } to { opacity:1; transform: scale(1) translateY(0); } }
-
         .search-wrapper { position: relative; }
         .search-wrapper i { position: absolute; right: 16px; top: 50%; transform: translateY(-50%); color: var(--muted); }
         .search-wrapper .input-field { padding-right: 45px; }
-
         @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
         .float-anim { animation: float 3s ease-in-out infinite; }
-
         .gold-line-animated {
             height: 2px; background: linear-gradient(90deg, transparent, var(--accent), transparent);
             background-size: 200% 100%; animation: shimmer 2s ease-in-out infinite;
             margin: 20px auto; width: 200px;
         }
         @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
-
         .tab-btn {
             padding: 10px 24px; border-radius: 10px; border: none; background: transparent;
             color: var(--text-secondary); font-family: 'Tajawal', sans-serif; font-size: 15px;
@@ -232,7 +205,6 @@
         }
         .tab-btn.active { background: rgba(13,155,118,0.15); color: var(--primary-light); }
         .tab-btn:hover:not(.active) { color: var(--text); background: rgba(255,255,255,0.03); }
-
         .progress-bar-container {
             width: 100%; height: 8px; background: rgba(255,255,255,0.06);
             border-radius: 4px; overflow: hidden; margin-top: 16px; display: none;
@@ -242,18 +214,25 @@
             height: 100%; background: linear-gradient(90deg, var(--primary), var(--accent));
             border-radius: 4px; transition: width 0.3s ease; width: 0%;
         }
-
+        .connection-banner {
+            padding: 12px 20px; border-radius: 12px; margin-bottom: 20px;
+            display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600;
+        }
+        .connection-banner.online {
+            background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.2); color: #6EE7B7;
+        }
+        .connection-banner.offline {
+            background: rgba(232,185,49,0.1); border: 1px solid rgba(232,185,49,0.2); color: #FDE68A;
+        }
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: transparent; }
         ::-webkit-scrollbar-thumb { background: var(--muted); border-radius: 3px; }
-
         @media (max-width: 768px) {
             .navbar { padding: 0 16px; }
             .stat-number { font-size: 24px; }
             .data-table { font-size: 13px; }
             .data-table thead th, .data-table tbody td { padding: 10px 8px; }
         }
-
         @media (prefers-reduced-motion: reduce) {
             *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
         }
@@ -350,6 +329,10 @@
             <!-- تبويب رفع شهادة -->
             <div id="tabUpload" class="tab-content">
                 <div class="glass-card" style="padding:36px;">
+                    <div id="uploadConnectionBanner" class="connection-banner offline">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <span>وضع محلي — الشهادات تُحفظ في المتصفح فقط. لإرسالها إلى Google Drive، أضف رابط السكربت في الإعدادات.</span>
+                    </div>
                     <h2 style="font-size:22px;font-weight:800;margin-bottom:28px;display:flex;align-items:center;gap:10px;">
                         <i class="fa-solid fa-cloud-arrow-up" style="color:var(--primary-light);"></i> رفع شهادة جديدة
                     </h2>
@@ -403,7 +386,7 @@
                         </h2>
                         <div class="search-wrapper" style="width:280px;">
                             <i class="fa-solid fa-magnifying-glass"></i>
-                            <input type="text" class="input-field" id="searchInput" placeholder="بحث بالاسم أو رقم الهوية..." oninput="filterCertificates()">
+                            <input type="text" class="input-field" id="searchInput" placeholder="بحث..." oninput="filterCertificates()">
                         </div>
                     </div>
                     <div style="overflow-x:auto;border-radius:12px;border:1px solid var(--border);">
@@ -426,15 +409,15 @@
                         <i class="fa-solid fa-gear" style="color:#818CF8;"></i> إعدادات الاتصال
                     </h2>
                     <div style="margin-bottom:20px;">
-                        <label style="display:block;margin-bottom:8px;font-weight:600;font-size:14px;color:var(--text-secondary);">رابط Google Apps Script</label>
-                        <input type="url" class="input-field" id="scriptUrlInput" placeholder="https://script.google.com/macros/s/AKfycbzJhFLOfSYDGkNA_1WWOXVjk4XXwnpfcQbQd6lcqdx4bYsxYFRobkLGOLmWYAHudJRF/exec" dir="ltr">
+                        <label style="display:block;margin-bottom:8px;font-weight:600;font-size:14px;color:var(--text-secondary);">https://script.google.com/macros/s/AKfycbzJhFLOfSYDGkNA_1WWOXVjk4XXwnpfcQbQd6lcqdx4bYsxYFRobkLGOLmWYAHudJRF/exec</label>
+                        <input type="url" class="input-field" id="scriptUrlInput" placeholder="https://script.google.com/macros/s/XXXXX/exec" dir="ltr">
                         <p style="color:var(--muted);font-size:12px;margin-top:6px;">يجب أن ينتهي بـ /exec وليس /dev</p>
                     </div>
                     <div style="margin-bottom:20px;">
                         <label style="display:block;margin-bottom:8px;font-weight:600;font-size:14px;color:var(--text-secondary);">كلمة مرور المدير الجديدة</label>
                         <input type="password" class="input-field" id="newAdminPass" placeholder="اترك فارغًا لعدم التغيير">
                     </div>
-                    <div style="display:flex;gap:12px;">
+                    <div style="display:flex;gap:12px;flex-wrap:wrap;">
                         <button class="btn-primary" onclick="saveSettings()"><i class="fa-solid fa-floppy-disk" style="margin-left:6px;"></i> حفظ الإعدادات</button>
                         <button class="btn-outline" onclick="testConnection()"><i class="fa-solid fa-plug" style="margin-left:6px;"></i> اختبار الاتصال</button>
                     </div>
@@ -442,7 +425,6 @@
                     <h3 style="font-size:18px;font-weight:700;margin-bottom:16px;color:var(--danger);">
                         <i class="fa-solid fa-triangle-exclamation" style="margin-left:8px;"></i> منطقة الخطر
                     </h3>
-                    <p style="color:var(--text-secondary);font-size:14px;margin-bottom:16px;">حذف جميع الشهادات من النظام المحلي.</p>
                     <button class="btn-danger" onclick="showDeleteAllModal()"><i class="fa-solid fa-trash" style="margin-left:6px;"></i> حذف جميع الشهادات المحلية</button>
                 </div>
             </div>
@@ -472,7 +454,7 @@
             <div class="glass-card" style="padding:40px;text-align:center;">
                 <i class="fa-solid fa-face-frown" style="font-size:50px;color:var(--muted);margin-bottom:16px;display:block;"></i>
                 <h3 style="font-size:20px;font-weight:700;margin-bottom:8px;">لم يتم العثور على شهادة</h3>
-                <p style="color:var(--text-secondary);font-size:15px;margin-bottom:24px;">تأكد من صحة رقم الهوية أو تواصل مع مدير النظام</p>
+                <p style="color:var(--text-secondary);font-size:15px;margin-bottom:24px;">تأكد من صحة رقم الهوية</p>
                 <button class="btn-outline" onclick="resetTraineeSearch()">إعادة المحاولة</button>
             </div>
         </div>
@@ -484,7 +466,7 @@
                     </h3>
                     <div style="display:flex;gap:10px;">
                         <button class="btn-outline btn-sm" onclick="resetTraineeSearch()"><i class="fa-solid fa-arrow-right" style="margin-left:6px;"></i> بحث جديد</button>
-                        <button class="btn-accent btn-sm" onclick="downloadCertificate()"><i class="fa-solid fa-download" style="margin-left:6px;"></i> تحميل الشهادة</button>
+                        <button class="btn-accent btn-sm" onclick="downloadCertificate()"><i class="fa-solid fa-download" style="margin-left:6px;"></i> تحميل</button>
                     </div>
                 </div>
                 <div id="certificateDisplayArea" style="display:flex;justify-content:center;"></div>
@@ -492,7 +474,7 @@
         </div>
     </section>
 
-    <!-- Modal حذف الكل -->
+    <!-- Modals -->
     <div class="modal-overlay" id="deleteAllModal">
         <div class="modal-content" style="text-align:center;">
             <div style="width:60px;height:60px;margin:0 auto 20px;background:rgba(239,68,68,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;">
@@ -501,13 +483,11 @@
             <h3 style="font-size:20px;font-weight:800;margin-bottom:10px;">تأكيد حذف جميع الشهادات</h3>
             <p style="color:var(--text-secondary);font-size:15px;margin-bottom:28px;">سيتم حذف جميع الشهادات المحلية نهائيًا.</p>
             <div style="display:flex;gap:12px;justify-content:center;">
-                <button class="btn-danger" style="padding:12px 28px;" onclick="deleteAllCertificates()">نعم، حذف الكل</button>
+                <button class="btn-danger" style="padding:12px 28px;" onclick="deleteAllCertificates()">نعم</button>
                 <button class="btn-outline" onclick="closeModal('deleteAllModal')">إلغاء</button>
             </div>
         </div>
     </div>
-
-    <!-- Modal معاينة -->
     <div class="modal-overlay" id="viewCertModal">
         <div class="modal-content" style="max-width:700px;padding:24px;text-align:center;">
             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
@@ -521,18 +501,18 @@
 
     <script>
     /* ========================================================
-       نظام إدارة الشهادات — النسخة النهائية
-       مع رفع مقسّم (Chunked Upload) إلى Google Drive
+       نظام إدارة الشهادات — النسخة النهائية المعدّلة
+       استخدام no-cors للـ POST لحل مشكلة redirect
        ======================================================== */
 
-    const APP_CONFIG = {
+    var APP_CONFIG = {
         SCRIPT_URL: localStorage.getItem('scriptUrl') || '',
         ADMIN_USER: 'admin',
         ADMIN_PASS: localStorage.getItem('adminPass') || 'admin123',
         CHUNK_SIZE: 500 * 1024
     };
 
-    let appState = {
+    var appState = {
         currentScreen: 'login',
         isAdmin: false,
         certificates: [],
@@ -540,701 +520,494 @@
         currentCertData: null
     };
 
-    document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', function() {
         initParticles();
         loadLocalData();
         setTodayDate();
         setupDragDrop();
-        updateConnectionStatus();
+        updateAllConnectionUI();
         if (APP_CONFIG.SCRIPT_URL) {
             document.getElementById('scriptUrlInput').value = APP_CONFIG.SCRIPT_URL;
         }
-        document.getElementById('traineeIdInput').addEventListener('keydown', e => {
+        document.getElementById('traineeIdInput').addEventListener('keydown', function(e) {
             if (e.key === 'Enter') searchCertificate();
         });
-        document.getElementById('adminPassword').addEventListener('keydown', e => {
+        document.getElementById('adminPassword').addEventListener('keydown', function(e) {
             if (e.key === 'Enter') loginAdmin();
         });
     });
 
     function loadLocalData() {
-        try {
-            appState.certificates = JSON.parse(localStorage.getItem('certificates') || '[]');
-        } catch (e) {
-            appState.certificates = [];
-        }
+        try { appState.certificates = JSON.parse(localStorage.getItem('certificates') || '[]'); }
+        catch (e) { appState.certificates = []; }
     }
+    function saveLocalData() { localStorage.setItem('certificates', JSON.stringify(appState.certificates)); }
+    function setTodayDate() { document.getElementById('certDate').value = new Date().toISOString().split('T')[0]; }
 
-    function saveLocalData() {
-        localStorage.setItem('certificates', JSON.stringify(appState.certificates));
-    }
-
-    function setTodayDate() {
-        document.getElementById('certDate').value = new Date().toISOString().split('T')[0];
-    }
-
-    function updateConnectionStatus() {
-        const el = document.getElementById('connectionStatus');
-        const url = APP_CONFIG.SCRIPT_URL;
-        if (url && url.includes('script.google.com') && url.includes('/exec')) {
-            el.innerHTML = '<span style="width:8px;height:8px;border-radius:50%;background:var(--success);display:inline-block;"></span> متصل بـ Google Drive';
-        } else {
-            el.innerHTML = '<span style="width:8px;height:8px;border-radius:50%;background:var(--accent);display:inline-block;"></span> وضع العرض التوضيحي';
-        }
-    }
-
-    function fixUrl(url) {
+    /* === تنظيف الرابط من أي معاملات === */
+    function cleanUrl(url) {
         if (!url) return '';
-        let f = url.replace(/\/dev$/, '/exec');
-        if (!f.endsWith('/exec')) f = f.replace(/\/$/, '') + '/exec';
-        return f;
+        // إزالة كل شيء بعد ؟ إذا وجد
+        var idx = url.indexOf('?');
+        if (idx > -1) url = url.substring(0, idx);
+        // إزالة /dev واستبداله بـ /exec
+        url = url.replace(/\/dev$/, '/exec');
+        // التأكد أنه ينتهي بـ /exec
+        url = url.replace(/\/+$/, '');
+        if (!url.endsWith('/exec')) url = url + '/exec';
+        return url;
     }
 
     function isOnline() {
-        const u = APP_CONFIG.SCRIPT_URL;
-        return u && u.includes('script.google.com') && u.includes('/exec');
+        var u = APP_CONFIG.SCRIPT_URL;
+        return u && u.indexOf('script.google.com') > -1 && u.indexOf('/exec') > -1;
     }
 
-    /* ================================
-       الجزيئات المتحركة
-       ================================ */
-    function initParticles() {
-        const canvas = document.getElementById('particles-canvas');
-        const ctx = canvas.getContext('2d');
-        let particles = [];
-
-        function resize() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
-        resize();
-        window.addEventListener('resize', resize);
-
-        for (let i = 0; i < 45; i++) {
-            particles.push({
-                x: Math.random() * canvas.width,
-                y: Math.random() * canvas.height,
-                size: Math.random() * 2 + 0.5,
-                speedX: (Math.random() - 0.5) * 0.3,
-                speedY: (Math.random() - 0.5) * 0.3,
-                color: Math.random() > 0.6
-                    ? 'rgba(232, 185, 49, ' + (Math.random() * 0.4 + 0.1) + ')'
-                    : 'rgba(13, 155, 118, ' + (Math.random() * 0.3 + 0.1) + ')'
-            });
-        }
-
-        function animate() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            particles.forEach(p => {
-                p.x += p.speedX;
-                p.y += p.speedY;
-                if (p.x < 0) p.x = canvas.width;
-                if (p.x > canvas.width) p.x = 0;
-                if (p.y < 0) p.y = canvas.height;
-                if (p.y > canvas.height) p.y = 0;
-
-                ctx.beginPath();
-                ctx.arc(p.x, p.y, Math.max(0.5, p.size), 0, Math.PI * 2);
-                ctx.fillStyle = p.color;
-                ctx.fill();
-            });
-
-            for (let i = 0; i < particles.length; i++) {
-                for (let j = i + 1; j < particles.length; j++) {
-                    const dx = particles[i].x - particles[j].x;
-                    const dy = particles[i].y - particles[j].y;
-                    const dist = Math.sqrt(dx * dx + dy * dy);
-                    if (dist < 120) {
-                        ctx.beginPath();
-                        ctx.moveTo(particles[i].x, particles[i].y);
-                        ctx.lineTo(particles[j].x, particles[j].y);
-                        ctx.strokeStyle = 'rgba(232, 185, 49, ' + (0.05 * (1 - dist / 120)) + ')';
-                        ctx.lineWidth = 0.5;
-                        ctx.stroke();
-                    }
-                }
+    function updateAllConnectionUI() {
+        var online = isOnline();
+        var el = document.getElementById('connectionStatus');
+        var banner = document.getElementById('uploadConnectionBanner');
+        if (online) {
+            el.innerHTML = '<span style="width:8px;height:8px;border-radius:50%;background:var(--success);display:inline-block;"></span> متصل بـ Google Drive';
+            if (banner) {
+                banner.className = 'connection-banner online';
+                banner.innerHTML = '<i class="fa-solid fa-circle-check"></i><span>متصل بـ Google Drive — الملفات ستُرفع مباشرة إلى مجلدك</span>';
             }
-
-            requestAnimationFrame(animate);
-        }
-        animate();
-    }
-
-    /* ================================
-       إدارة الشاشات
-       ================================ */
-    function showScreen(id) {
-        document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
-        document.getElementById(id).classList.add('active');
-        appState.currentScreen = id;
-    }
-
-    function goToLogin() {
-        showScreen('screenLogin');
-        hideAdminLogin();
-    }
-
-    function goToTraineeScreen() {
-        showScreen('screenTrainee');
-        resetTraineeSearch();
-        document.getElementById('traineeIdInput').focus();
-    }
-
-    /* ================================
-       تسجيل دخول المدير
-       ================================ */
-    function showAdminLogin() {
-        document.getElementById('adminLoginForm').style.display = 'block';
-        document.getElementById('adminUsername').focus();
-    }
-
-    function hideAdminLogin() {
-        document.getElementById('adminLoginForm').style.display = 'none';
-        document.getElementById('adminUsername').value = '';
-        document.getElementById('adminPassword').value = '';
-    }
-
-    function loginAdmin() {
-        const u = document.getElementById('adminUsername').value.trim();
-        const p = document.getElementById('adminPassword').value;
-        if (!u || !p) { showToast('يرجى ملء جميع الحقول', 'error'); return; }
-        if (u === APP_CONFIG.ADMIN_USER && p === APP_CONFIG.ADMIN_PASS) {
-            showScreen('screenAdmin');
-            refreshList();
-            updateStats();
-            showToast('تم تسجيل الدخول بنجاح', 'success');
         } else {
-            showToast('اسم المستخدم أو كلمة المرور غير صحيحة', 'error');
+            el.innerHTML = '<span style="width:8px;height:8px;border-radius:50%;background:var(--accent);display:inline-block;"></span> وضع العرض التوضيحي';
+            if (banner) {
+                banner.className = 'connection-banner offline';
+                banner.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i><span>وضع محلي — الشهادات تُحفظ في المتصفح فقط. لإرسالها إلى Google Drive، أضف رابط السكربت في الإعدادات.</span>';
+            }
         }
     }
 
-    function logout() {
-        goToLogin();
-        showToast('تم تسجيل الخروج', 'info');
-    }
-
-    /* ================================
-       التبويبات
-       ================================ */
-    function switchTab(name, btn) {
-        document.querySelectorAll('.tab-content').forEach(t => t.style.display = 'none');
-        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-        document.getElementById('tab' + name.charAt(0).toUpperCase() + name.slice(1)).style.display = 'block';
-        btn.classList.add('active');
-    }
-
-    /* ================================
-       اختيار الملف
-       ================================ */
-    function setupDragDrop() {
-        const zone = document.getElementById('fileDropZone');
-        zone.addEventListener('dragover', e => { e.preventDefault(); zone.classList.add('drag-over'); });
-        zone.addEventListener('dragleave', () => zone.classList.remove('drag-over'));
-        zone.addEventListener('drop', e => {
-            e.preventDefault();
-            zone.classList.remove('drag-over');
-            if (e.dataTransfer.files.length) processFile(e.dataTransfer.files[0]);
+    /* === دالة الاتصال بالسيرفر — تحل مشكلة redirect === */
+    function serverPost(data) {
+        var url = cleanUrl(APP_CONFIG.SCRIPT_URL);
+        return new Promise(function(resolve, reject) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', url, true);
+            xhr.setRequestHeader('Content-Type', 'text/plain');
+            xhr.onload = function() {
+                try {
+                    var result = JSON.parse(xhr.responseText);
+                    resolve(result);
+                } catch (e) {
+                    reject(new Error('فشل تحليل الاستجابة: ' + xhr.responseText.substring(0, 200)));
+                }
+            };
+            xhr.onerror = function() {
+                reject(new Error('فشل الاتصال بالسيرفر'));
+            };
+            xhr.send(JSON.stringify(data));
         });
     }
 
-    function handleFileSelect(e) {
-        if (e.target.files[0]) processFile(e.target.files[0]);
-    }
-
-    function processFile(file) {
-        if (!['application/pdf', 'image/png', 'image/jpeg', 'image/jpg'].includes(file.type)) {
-            showToast('نوع الملف غير مدعوم. يُرجى رفع PDF أو صورة', 'error');
-            return;
-        }
-        if (file.size > 10 * 1024 * 1024) {
-            showToast('حجم الملف يتجاوز 10 ميجابايت', 'error');
-            return;
-        }
-        appState.selectedFile = file;
-        const zone = document.getElementById('fileDropZone');
-        const content = document.getElementById('fileDropContent');
-        zone.classList.add('has-file');
-        const sizeMB = (file.size / (1024 * 1024)).toFixed(2);
-        const icon = file.type === 'application/pdf' ? 'fa-file-pdf' : 'fa-file-image';
-        const color = file.type === 'application/pdf' ? '#EF4444' : '#10B981';
-        content.innerHTML = '<i class="fa-solid ' + icon + '" style="font-size:36px;color:' + color + ';margin-bottom:10px;display:block;"></i><p style="color:var(--text);font-weight:700;margin-bottom:4px;">' + file.name + '</p><p style="color:var(--muted);font-size:13px;">' + sizeMB + ' ميجابايت</p>';
-        showToast('تم اختيار الملف', 'success');
+    function serverGet(params) {
+        var url = cleanUrl(APP_CONFIG.SCRIPT_URL) + '?' + params;
+        return new Promise(function(resolve, reject) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', url, true);
+            xhr.onload = function() {
+                try {
+                    var result = JSON.parse(xhr.responseText);
+                    resolve(result);
+                } catch (e) {
+                    reject(new Error('فشل تحليل الاستجابة'));
+                }
+            };
+            xhr.onerror = function() { reject(new Error('فشل الاتصال')); };
+            xhr.send();
+        });
     }
 
     /* ================================
-       رفع الشهادة (مقسّم)
+       الجزيئات
        ================================ */
-    async function uploadCertificate() {
-        const idNumber = document.getElementById('certIdNumber').value.trim();
-        const traineeName = document.getElementById('certTraineeName').value.trim();
-        const program = document.getElementById('certProgram').value.trim();
-        const date = document.getElementById('certDate').value;
+    function initParticles() {
+        var canvas = document.getElementById('particles-canvas');
+        var ctx = canvas.getContext('2d');
+        var particles = [];
+        function resize() { canvas.width = innerWidth; canvas.height = innerHeight; }
+        resize();
+        addEventListener('resize', resize);
+        for (var i = 0; i < 40; i++) {
+            particles.push({
+                x: Math.random()*canvas.width, y: Math.random()*canvas.height,
+                s: Math.random()*2+0.5, sx: (Math.random()-0.5)*0.3, sy: (Math.random()-0.5)*0.3,
+                col: Math.random()>0.6 ? 'rgba(232,185,49,'+(Math.random()*0.4+0.1)+')' : 'rgba(13,155,118,'+(Math.random()*0.3+0.1)+')'
+            });
+        }
+        (function draw() {
+            ctx.clearRect(0,0,canvas.width,canvas.height);
+            particles.forEach(function(p) {
+                p.x+=p.sx; p.y+=p.sy;
+                if(p.x<0)p.x=canvas.width; if(p.x>canvas.width)p.x=0;
+                if(p.y<0)p.y=canvas.height; if(p.y>canvas.height)p.y=0;
+                ctx.beginPath(); ctx.arc(p.x,p.y,Math.max(0.5,p.s),0,Math.PI*2); ctx.fillStyle=p.col; ctx.fill();
+            });
+            for(var i=0;i<particles.length;i++) for(var j=i+1;j<particles.length;j++) {
+                var dx=particles[i].x-particles[j].x, dy=particles[i].y-particles[j].y, d=Math.sqrt(dx*dx+dy*dy);
+                if(d<120){ ctx.beginPath(); ctx.moveTo(particles[i].x,particles[i].y); ctx.lineTo(particles[j].x,particles[j].y); ctx.strokeStyle='rgba(232,185,49,'+(0.05*(1-d/120))+')'; ctx.lineWidth=0.5; ctx.stroke(); }
+            }
+            requestAnimationFrame(draw);
+        })();
+    }
 
-        if (!idNumber) { showToast('أدخل رقم الهوية', 'error'); return; }
-        if (!traineeName) { showToast('أدخل اسم المتدرب', 'error'); return; }
-        if (!appState.selectedFile) { showToast('اختر ملف الشهادة', 'error'); return; }
-        if (appState.certificates.find(c => c.idNumber === idNumber)) {
-            showToast('رقم الهوية مسجل مسبقًا', 'error');
+    /* ================================
+       الشاشات
+       ================================ */
+    function showScreen(id) { document.querySelectorAll('.screen').forEach(function(s){s.classList.remove('active');}); document.getElementById(id).classList.add('active'); }
+    function goToLogin() { showScreen('screenLogin'); hideAdminLogin(); }
+    function goToTraineeScreen() { showScreen('screenTrainee'); resetTraineeSearch(); document.getElementById('traineeIdInput').focus(); }
+
+    function showAdminLogin() { document.getElementById('adminLoginForm').style.display='block'; document.getElementById('adminUsername').focus(); }
+    function hideAdminLogin() { document.getElementById('adminLoginForm').style.display='none'; document.getElementById('adminUsername').value=''; document.getElementById('adminPassword').value=''; }
+
+    function loginAdmin() {
+        var u=document.getElementById('adminUsername').value.trim(), p=document.getElementById('adminPassword').value;
+        if(!u||!p){ showToast('يرجى ملء جميع الحقول','error'); return; }
+        if(u===APP_CONFIG.ADMIN_USER && p===APP_CONFIG.ADMIN_PASS){ showScreen('screenAdmin'); refreshList(); updateStats(); updateAllConnectionUI(); showToast('تم تسجيل الدخول','success'); }
+        else showToast('بيانات خاطئة','error');
+    }
+    function logout() { goToLogin(); showToast('تم تسجيل الخروج','info'); }
+
+    function switchTab(name, btn) {
+        document.querySelectorAll('.tab-content').forEach(function(t){t.style.display='none';});
+        document.querySelectorAll('.tab-btn').forEach(function(b){b.classList.remove('active');});
+        document.getElementById('tab'+name.charAt(0).toUpperCase()+name.slice(1)).style.display='block';
+        btn.classList.add('active');
+        if (name === 'upload') updateAllConnectionUI();
+    }
+
+    /* ================================
+       الملفات
+       ================================ */
+    function setupDragDrop() {
+        var z = document.getElementById('fileDropZone');
+        z.addEventListener('dragover', function(e){e.preventDefault();z.classList.add('drag-over');});
+        z.addEventListener('dragleave', function(){z.classList.remove('drag-over');});
+        z.addEventListener('drop', function(e){e.preventDefault();z.classList.remove('drag-over');if(e.dataTransfer.files.length)processFile(e.dataTransfer.files[0]);});
+    }
+    function handleFileSelect(e) { if(e.target.files[0])processFile(e.target.files[0]); }
+    function processFile(file) {
+        if(!['application/pdf','image/png','image/jpeg','image/jpg'].includes(file.type)){showToast('نوع الملف غير مدعوم','error');return;}
+        if(file.size>10*1024*1024){showToast('الملف أكبر من 10 ميجابايت','error');return;}
+        appState.selectedFile=file;
+        var z=document.getElementById('fileDropZone'),c=document.getElementById('fileDropContent');
+        z.classList.add('has-file');
+        var sz=(file.size/(1024*1024)).toFixed(2),ic=file.type==='application/pdf'?'fa-file-pdf':'fa-file-image',cl=file.type==='application/pdf'?'#EF4444':'#10B981';
+        c.innerHTML='<i class="fa-solid '+ic+'" style="font-size:36px;color:'+cl+';margin-bottom:10px;display:block;"></i><p style="color:var(--text);font-weight:700;">'+file.name+'</p><p style="color:var(--muted);font-size:13px;">'+sz+' ميجابايت</p>';
+        showToast('تم اختيار الملف','success');
+    }
+
+    /* ================================
+       رفع الشهادة — النسخة المعدّلة بـ XHR
+       ================================ */
+    function uploadCertificate() {
+        var idNumber = document.getElementById('certIdNumber').value.trim();
+        var traineeName = document.getElementById('certTraineeName').value.trim();
+        var program = document.getElementById('certProgram').value.trim();
+        var date = document.getElementById('certDate').value;
+
+        if(!idNumber){showToast('أدخل رقم الهوية','error');return;}
+        if(!traineeName){showToast('أدخل اسم المتدرب','error');return;}
+        if(!appState.selectedFile){showToast('اختر ملف الشهادة','error');return;}
+        if(appState.certificates.find(function(c){return c.idNumber===idNumber;})){showToast('رقم الهوية مسجل مسبقًا','error');return;}
+
+        if (!isOnline()) {
+            showToast('أنت في الوضع المحلي. أضف رابط السكربت في الإعدادات أولًا','error');
             return;
         }
 
-        const btn = document.getElementById('uploadBtn');
-        const origHTML = btn.innerHTML;
+        var btn = document.getElementById('uploadBtn');
+        var origHTML = btn.innerHTML;
         btn.disabled = true;
 
-        const progBar = document.getElementById('progressBarContainer');
-        const progFill = document.getElementById('progressBarFill');
-        const progText = document.getElementById('progressText');
+        var progBar = document.getElementById('progressBarContainer');
+        var progFill = document.getElementById('progressBarFill');
+        var progText = document.getElementById('progressText');
         progBar.classList.add('active');
         progText.style.display = 'block';
 
-        try {
-            const base64 = await fileToBase64(appState.selectedFile);
-            const fileName = appState.selectedFile.name;
-            const fileType = appState.selectedFile.type;
+        var reader = new FileReader();
+        reader.onload = function() {
+            var base64 = reader.result.split(',')[1];
+            var fileName = appState.selectedFile.name;
+            var fileType = appState.selectedFile.type;
+            var totalChunks = Math.ceil(base64.length / APP_CONFIG.CHUNK_SIZE);
 
-            if (isOnline()) {
-                /* === رفع مقسّم إلى Google Drive === */
-                const apiUrl = fixUrl(APP_CONFIG.SCRIPT_URL);
-                const totalChunks = Math.ceil(base64.length / APP_CONFIG.CHUNK_SIZE);
+            progText.textContent = 'جاري بدء الرفع (' + totalChunks + ' جزء)...';
+            btn.innerHTML = '<span class="spinner"></span> جاري الرفع... 0%';
 
-                progText.textContent = 'جاري بدء الرفع (' + totalChunks + ' جزء)...';
-                btn.innerHTML = '<span class="spinner"></span> جاري الرفع... 0%';
-
-                // المرحلة 1: بدء التحميل
-                const startRes = await fetch(apiUrl, {
-                    method: 'POST',
-                    redirect: 'follow',
-                    headers: { 'Content-Type': 'text/plain' },
-                    body: JSON.stringify({
-                        action: 'startUpload',
-                        idNumber: idNumber,
-                        traineeName: traineeName,
-                        program: program || 'برنامج تدريبي',
-                        date: date || new Date().toISOString().split('T')[0],
-                        fileName: fileName,
-                        fileType: fileType,
-                        totalChunks: totalChunks
-                    })
-                });
-                const startData = await startRes.json();
+            // المرحلة 1: بدء التحميل
+            serverPost({
+                action: 'startUpload',
+                idNumber: idNumber,
+                traineeName: traineeName,
+                program: program || 'برنامج تدريبي',
+                date: date || new Date().toISOString().split('T')[0],
+                fileName: fileName,
+                fileType: fileType,
+                totalChunks: totalChunks
+            }).then(function(startData) {
                 if (startData.status !== 'success') throw new Error(startData.message);
-                const uploadId = startData.uploadId;
+                var uploadId = startData.uploadId;
 
-                // المرحلة 2: رفع الأجزاء
-                for (let i = 0; i < totalChunks; i++) {
-                    const chunk = base64.slice(i * APP_CONFIG.CHUNK_SIZE, (i + 1) * APP_CONFIG.CHUNK_SIZE);
-                    const pct = Math.round(((i + 1) / totalChunks) * 90);
+                // المرحلة 2: رفع الأجزاء بالتتابع
+                return uploadChunksSequentially(uploadId, base64, totalChunks, progFill, progText, btn);
 
-                    progFill.style.width = pct + '%';
-                    progText.textContent = 'رفع الجزء ' + (i + 1) + ' من ' + totalChunks + ' (' + pct + '%)...';
-                    btn.innerHTML = '<span class="spinner"></span> جاري الرفع... ' + pct + '%';
-
-                    const chunkRes = await fetch(apiUrl, {
-                        method: 'POST',
-                        redirect: 'follow',
-                        headers: { 'Content-Type': 'text/plain' },
-                        body: JSON.stringify({
-                            action: 'uploadChunk',
-                            uploadId: uploadId,
-                            chunkIndex: i,
-                            chunkData: chunk
-                        })
-                    });
-                    const chunkData = await chunkRes.json();
-                    if (chunkData.status !== 'success') {
-                        throw new Error('فشل رفع الجزء ' + (i + 1) + ': ' + chunkData.message);
-                    }
-                }
-
+            }).then(function(uploadId) {
                 // المرحلة 3: إنهاء ودمج
                 progFill.style.width = '95%';
                 progText.textContent = 'جاري دمج الأجزاء...';
                 btn.innerHTML = '<span class="spinner"></span> جاري المعالجة...';
 
-                const finishRes = await fetch(apiUrl, {
-                    method: 'POST',
-                    redirect: 'follow',
-                    headers: { 'Content-Type': 'text/plain' },
-                    body: JSON.stringify({ action: 'finishUpload', uploadId: uploadId })
-                });
-                const finishData = await finishRes.json();
+                return serverPost({ action: 'finishUpload', uploadId: uploadId });
+
+            }).then(function(finishData) {
                 if (finishData.status !== 'success') throw new Error(finishData.message);
 
                 progFill.style.width = '100%';
                 progText.textContent = 'تم الرفع بنجاح!';
                 showToast('تم رفع الشهادة إلى Google Drive بنجاح', 'success');
-                await refreshFromServer();
 
-            } else {
-                /* === وضع محلي === */
-                btn.innerHTML = '<span class="spinner"></span> جاري الحفظ...';
-                progFill.style.width = '50%';
-                progText.textContent = 'جاري حفظ الملف محليًا...';
+                return refreshFromServer();
 
-                appState.certificates.push({
-                    id: Date.now().toString(),
-                    idNumber: idNumber,
-                    traineeName: traineeName,
-                    program: program || 'برنامج تدريبي',
-                    date: date || new Date().toISOString().split('T')[0],
-                    fileName: fileName,
-                    fileType: fileType,
-                    fileData: base64,
-                    uploadDate: new Date().toISOString(),
-                    source: 'local'
-                });
-                saveLocalData();
-                progFill.style.width = '100%';
-                progText.textContent = 'تم الحفظ محليًا';
-                showToast('تم حفظ الشهادة محليًا (وضع توضيحي)', 'success');
+            }).then(function() {
+                resetUploadForm();
+                refreshList();
+                updateStats();
+
+            }).catch(function(err) {
+                console.error('خطأ في الرفع:', err);
+                showToast('خطأ: ' + err.message, 'error');
+                progText.textContent = 'فشل الرفع: ' + err.message;
+
+            }).finally(function() {
+                btn.innerHTML = origHTML;
+                btn.disabled = false;
+                setTimeout(function() {
+                    progBar.classList.remove('active');
+                    progFill.style.width = '0%';
+                    progText.style.display = 'none';
+                }, 5000);
+            });
+        };
+        reader.onerror = function() { showToast('فشل قراءة الملف','error'); btn.innerHTML=origHTML; btn.disabled=false; };
+        reader.readAsDataURL(appState.selectedFile);
+    }
+
+    /* رفع الأجزاء بالتتابع */
+    function uploadChunksSequentially(uploadId, base64, totalChunks, progFill, progText, btn) {
+        var chunkIndex = 0;
+
+        function uploadNext() {
+            if (chunkIndex >= totalChunks) {
+                return Promise.resolve(uploadId);
             }
 
-            resetUploadForm();
-            refreshList();
-            updateStats();
+            var chunk = base64.slice(chunkIndex * APP_CONFIG.CHUNK_SIZE, (chunkIndex + 1) * APP_CONFIG.CHUNK_SIZE);
+            var pct = Math.round(((chunkIndex + 1) / totalChunks) * 90);
 
-        } catch (err) {
-            console.error('خطأ في الرفع:', err);
-            showToast('خطأ: ' + err.message, 'error');
-        } finally {
-            btn.innerHTML = origHTML;
-            btn.disabled = false;
-            setTimeout(() => {
-                progBar.classList.remove('active');
-                progFill.style.width = '0%';
-                progText.style.display = 'none';
-            }, 3000);
+            progFill.style.width = pct + '%';
+            progText.textContent = 'رفع الجزء ' + (chunkIndex + 1) + ' من ' + totalChunks + ' (' + pct + '%)...';
+            btn.innerHTML = '<span class="spinner"></span> جاري الرفع... ' + pct + '%';
+
+            return serverPost({
+                action: 'uploadChunk',
+                uploadId: uploadId,
+                chunkIndex: chunkIndex,
+                chunkData: chunk
+            }).then(function(data) {
+                if (data.status !== 'success') throw new Error('فشل الجزء ' + (chunkIndex+1) + ': ' + data.message);
+                chunkIndex++;
+                return uploadNext();
+            });
         }
+
+        return uploadNext();
     }
 
     function resetUploadForm() {
-        document.getElementById('certIdNumber').value = '';
-        document.getElementById('certTraineeName').value = '';
-        document.getElementById('certProgram').value = '';
+        document.getElementById('certIdNumber').value='';
+        document.getElementById('certTraineeName').value='';
+        document.getElementById('certProgram').value='';
         setTodayDate();
-        appState.selectedFile = null;
+        appState.selectedFile=null;
         document.getElementById('fileDropZone').classList.remove('has-file');
-        document.getElementById('fileDropContent').innerHTML = '<i class="fa-solid fa-cloud-arrow-up" style="font-size:40px;color:var(--muted);margin-bottom:12px;display:block;"></i><p style="color:var(--text-secondary);font-weight:600;margin-bottom:4px;">اسحب الملف هنا أو انقر للاختيار</p><p style="color:var(--muted);font-size:13px;">PDF, PNG, JPG — الحد الأقصى 10 ميجابايت</p>';
-        document.getElementById('certFile').value = '';
-    }
-
-    function fileToBase64(file) {
-        return new Promise((resolve, reject) => {
-            const reader = new FileReader();
-            reader.onload = () => resolve(reader.result.split(',')[1]);
-            reader.onerror = reject;
-            reader.readAsDataURL(file);
-        });
+        document.getElementById('fileDropContent').innerHTML='<i class="fa-solid fa-cloud-arrow-up" style="font-size:40px;color:var(--muted);margin-bottom:12px;display:block;"></i><p style="color:var(--text-secondary);font-weight:600;margin-bottom:4px;">اسحب الملف هنا أو انقر للاختيار</p><p style="color:var(--muted);font-size:13px;">PDF, PNG, JPG — الحد الأقصى 10 ميجابايت</p>';
+        document.getElementById('certFile').value='';
     }
 
     /* ================================
-       قائمة الشهادات
+       القائمة
        ================================ */
     function refreshList() {
-        const tbody = document.getElementById('certificatesTableBody');
-        const empty = document.getElementById('emptyState');
-        const certs = appState.certificates;
-
-        if (!certs.length) {
-            tbody.innerHTML = '';
-            empty.style.display = 'block';
-            return;
-        }
-
-        empty.style.display = 'none';
-        tbody.innerHTML = certs.map((c, i) =>
-            '<tr>' +
-            '<td style="color:var(--muted);font-weight:600;">' + (i + 1) + '</td>' +
-            '<td style="font-weight:700;direction:ltr;text-align:right;">' + esc(c.idNumber) + '</td>' +
-            '<td style="font-weight:600;">' + esc(c.traineeName) + '</td>' +
-            '<td style="color:var(--text-secondary);">' + esc(c.program || '—') + '</td>' +
-            '<td style="color:var(--text-secondary);direction:ltr;text-align:right;">' + (c.date || '—') + '</td>' +
-            '<td><div style="display:flex;gap:8px;">' +
-            '<button class="btn-outline btn-sm" style="padding:6px 12px;font-size:12px;" onclick="previewCert(\'' + c.id + '\')" title="معاينة"><i class="fa-solid fa-eye"></i></button>' +
-            '<button class="btn-danger" style="padding:6px 12px;font-size:12px;" onclick="deleteCert(\'' + c.id + '\')" title="حذف"><i class="fa-solid fa-trash"></i></button>' +
-            '</div></td></tr>'
-        ).join('');
+        var tb=document.getElementById('certificatesTableBody'), es=document.getElementById('emptyState'), certs=appState.certificates;
+        if(!certs.length){tb.innerHTML='';es.style.display='block';return;}
+        es.style.display='none';
+        tb.innerHTML=certs.map(function(c,i){
+            return '<tr><td style="color:var(--muted);font-weight:600;">'+(i+1)+'</td><td style="font-weight:700;direction:ltr;text-align:right;">'+esc(c.idNumber)+'</td><td style="font-weight:600;">'+esc(c.traineeName)+'</td><td style="color:var(--text-secondary);">'+esc(c.program||'—')+'</td><td style="color:var(--text-secondary);direction:ltr;text-align:right;">'+(c.date||'—')+'</td><td><div style="display:flex;gap:8px;"><button class="btn-outline btn-sm" style="padding:6px 12px;font-size:12px;" onclick="previewCert(\''+c.id+'\')" title="معاينة"><i class="fa-solid fa-eye"></i></button><button class="btn-danger" style="padding:6px 12px;font-size:12px;" onclick="deleteCert(\''+c.id+'\')" title="حذف"><i class="fa-solid fa-trash"></i></button></div></td></tr>';
+        }).join('');
     }
 
     function filterCertificates() {
-        const q = document.getElementById('searchInput').value.trim().toLowerCase();
-        document.querySelectorAll('#certificatesTableBody tr').forEach(row => {
-            row.style.display = row.textContent.toLowerCase().includes(q) ? '' : 'none';
-        });
+        var q=document.getElementById('searchInput').value.trim().toLowerCase();
+        document.querySelectorAll('#certificatesTableBody tr').forEach(function(r){r.style.display=r.textContent.toLowerCase().indexOf(q)>-1?'':'none';});
     }
 
-    async function deleteCert(id) {
-        const cert = appState.certificates.find(c => c.id === id);
-        if (!cert) return;
-        try {
-            if (isOnline() && cert.driveFileId) {
-                showLoading();
-                document.getElementById('loadingText').textContent = 'جاري الحذف من Drive...';
-                const r = await fetch(fixUrl(APP_CONFIG.SCRIPT_URL), {
-                    method: 'POST', redirect: 'follow',
-                    headers: { 'Content-Type': 'text/plain' },
-                    body: JSON.stringify({ action: 'delete', idNumber: cert.idNumber })
-                });
-                const d = await r.json();
+    function deleteCert(id) {
+        var cert=appState.certificates.find(function(c){return c.id===id;}); if(!cert)return;
+        if(isOnline()&&cert.driveFileId){
+            showLoading(); document.getElementById('loadingText').textContent='جاري الحذف...';
+            serverPost({action:'delete',idNumber:cert.idNumber}).then(function(d){
                 hideLoading();
-                if (d.status !== 'success') throw new Error(d.message);
-            }
-            appState.certificates = appState.certificates.filter(c => c.id !== id);
-            saveLocalData();
-            refreshList();
-            updateStats();
-            showToast('تم حذف الشهادة', 'success');
-        } catch (e) {
-            hideLoading();
-            showToast('خطأ: ' + e.message, 'error');
+                if(d.status!=='success')throw new Error(d.message);
+                appState.certificates=appState.certificates.filter(function(c){return c.id!==id;});
+                saveLocalData();refreshList();updateStats();showToast('تم الحذف','success');
+            }).catch(function(e){hideLoading();showToast('خطأ: '+e.message,'error');});
+        } else {
+            appState.certificates=appState.certificates.filter(function(c){return c.id!==id;});
+            saveLocalData();refreshList();updateStats();showToast('تم الحذف','success');
         }
     }
 
     function previewCert(id) {
-        const c = appState.certificates.find(x => x.id === id);
-        if (!c) return;
-        const el = document.getElementById('viewCertContent');
-        if (c.fileType === 'application/pdf') {
-            const src = c.driveFileId
-                ? 'https://drive.google.com/file/d/' + c.driveFileId + '/preview'
-                : 'data:application/pdf;base64,' + c.fileData;
-            el.innerHTML = '<iframe src="' + src + '" style="width:100%;height:500px;border:none;border-radius:8px;" allow="fullscreen"></iframe>';
+        var c=appState.certificates.find(function(x){return x.id===id;}); if(!c)return;
+        var el=document.getElementById('viewCertContent');
+        if(c.fileType==='application/pdf'){
+            var src=c.driveFileId?'https://drive.google.com/file/d/'+c.driveFileId+'/preview':'data:application/pdf;base64,'+c.fileData;
+            el.innerHTML='<iframe src="'+src+'" style="width:100%;height:500px;border:none;border-radius:8px;" allow="fullscreen"></iframe>';
         } else {
-            const src = c.driveFileId
-                ? 'https://drive.google.com/uc?export=view&id=' + c.driveFileId
-                : 'data:' + c.fileType + ';base64,' + c.fileData;
-            el.innerHTML = '<img src="' + src + '" alt="شهادة" style="max-width:100%;border-radius:8px;box-shadow:0 10px 40px rgba(0,0,0,0.3);">';
+            var src=c.driveFileId?'https://drive.google.com/uc?export=view&id='+c.driveFileId:'data:'+c.fileType+';base64,'+c.fileData;
+            el.innerHTML='<img src="'+src+'" alt="شهادة" style="max-width:100%;border-radius:8px;box-shadow:0 10px 40px rgba(0,0,0,0.3);">';
         }
         document.getElementById('viewCertModal').classList.add('active');
     }
 
-    /* ================================
-       الإحصائيات
-       ================================ */
     function updateStats() {
-        const certs = appState.certificates;
-        document.getElementById('statTotal').textContent = certs.length;
-
-        const now = new Date();
-        document.getElementById('statRecent').textContent = certs.filter(c => {
-            const d = new Date(c.uploadDate || c.date);
-            return d.getMonth() === now.getMonth() && d.getFullYear() === now.getFullYear();
-        }).length;
-
-        let totalSize = 0;
-        certs.forEach(c => { if (c.fileData) totalSize += (c.fileData.length * 3) / 4; });
-        document.getElementById('statStorage').textContent = (totalSize / (1024 * 1024)).toFixed(1) + ' MB';
+        var certs=appState.certificates;
+        document.getElementById('statTotal').textContent=certs.length;
+        var now=new Date();
+        document.getElementById('statRecent').textContent=certs.filter(function(c){var d=new Date(c.uploadDate||c.date);return d.getMonth()===now.getMonth()&&d.getFullYear()===now.getFullYear();}).length;
+        var s=0;certs.forEach(function(c){if(c.fileData)s+=(c.fileData.length*3)/4;});
+        document.getElementById('statStorage').textContent=(s/(1024*1024)).toFixed(1)+' MB';
     }
 
     /* ================================
-       بحث المتدرب
+       المتدرب
        ================================ */
-    async function searchCertificate() {
-        const id = document.getElementById('traineeIdInput').value.trim();
-        if (!id) { showToast('أدخل رقم الهوية', 'error'); return; }
-
-        showLoading();
-        document.getElementById('loadingText').textContent = 'جاري البحث...';
-
-        try {
-            let cert = null;
-            if (isOnline()) {
-                const r = await fetch(fixUrl(APP_CONFIG.SCRIPT_URL) + '?action=get&id=' + encodeURIComponent(id), { redirect: 'follow' });
-                const d = await r.json();
-                if (d.status === 'success' && d.certificate) cert = d.certificate;
-            } else {
-                cert = appState.certificates.find(c => c.idNumber === id);
-            }
-
+    function searchCertificate() {
+        var id=document.getElementById('traineeIdInput').value.trim();
+        if(!id){showToast('أدخل رقم الهوية','error');return;}
+        showLoading(); document.getElementById('loadingText').textContent='جاري البحث...';
+        if(isOnline()){
+            serverGet('action=get&id='+encodeURIComponent(id)).then(function(d){
+                hideLoading();
+                if(d.status==='success'&&d.certificate){appState.currentCertData=d.certificate;showTraineeCert(d.certificate);}
+                else{document.getElementById('traineeSearchForm').style.display='none';document.getElementById('traineeNotFound').style.display='block';document.getElementById('traineeFound').style.display='none';}
+            }).catch(function(e){hideLoading();showToast('خطأ في البحث','error');});
+        } else {
+            var cert=appState.certificates.find(function(c){return c.idNumber===id;});
             hideLoading();
-
-            if (cert) {
-                appState.currentCertData = cert;
-                showTraineeCert(cert);
-            } else {
-                document.getElementById('traineeSearchForm').style.display = 'none';
-                document.getElementById('traineeNotFound').style.display = 'block';
-                document.getElementById('traineeFound').style.display = 'none';
-            }
-        } catch (e) {
-            hideLoading();
-            showToast('خطأ في البحث', 'error');
+            if(cert){appState.currentCertData=cert;showTraineeCert(cert);}
+            else{document.getElementById('traineeSearchForm').style.display='none';document.getElementById('traineeNotFound').style.display='block';document.getElementById('traineeFound').style.display='none';}
         }
     }
 
     function showTraineeCert(c) {
-        document.getElementById('traineeSearchForm').style.display = 'none';
-        document.getElementById('traineeNotFound').style.display = 'none';
-        document.getElementById('traineeFound').style.display = 'block';
-
-        const el = document.getElementById('certificateDisplayArea');
-        if (c.fileType === 'application/pdf') {
-            const src = c.driveFileId
-                ? 'https://drive.google.com/file/d/' + c.driveFileId + '/preview'
-                : 'data:application/pdf;base64,' + c.fileData;
-            el.innerHTML = '<iframe src="' + src + '" style="width:100%;height:500px;border:none;border-radius:8px;" allow="fullscreen"></iframe>';
+        document.getElementById('traineeSearchForm').style.display='none';
+        document.getElementById('traineeNotFound').style.display='none';
+        document.getElementById('traineeFound').style.display='block';
+        var el=document.getElementById('certificateDisplayArea');
+        if(c.fileType==='application/pdf'){
+            var src=c.driveFileId?'https://drive.google.com/file/d/'+c.driveFileId+'/preview':'data:application/pdf;base64,'+c.fileData;
+            el.innerHTML='<iframe src="'+src+'" style="width:100%;height:500px;border:none;border-radius:8px;" allow="fullscreen"></iframe>';
         } else {
-            const src = c.driveFileId
-                ? 'https://drive.google.com/uc?export=view&id=' + c.driveFileId
-                : 'data:' + c.fileType + ';base64,' + c.fileData;
-            el.innerHTML = '<div class="certificate-frame" style="display:inline-block;"><div class="certificate-inner"><img src="' + src + '" alt="شهادة ' + esc(c.traineeName) + '" style="max-width:100%;max-height:500px;border-radius:4px;"></div></div>';
+            var src=c.driveFileId?'https://drive.google.com/uc?export=view&id='+c.driveFileId:'data:'+c.fileType+';base64,'+c.fileData;
+            el.innerHTML='<div class="certificate-frame" style="display:inline-block;"><div class="certificate-inner"><img src="'+src+'" alt="شهادة" style="max-width:100%;max-height:500px;border-radius:4px;"></div></div>';
         }
     }
 
     function resetTraineeSearch() {
-        document.getElementById('traineeSearchForm').style.display = 'block';
-        document.getElementById('traineeNotFound').style.display = 'none';
-        document.getElementById('traineeFound').style.display = 'none';
-        document.getElementById('traineeIdInput').value = '';
+        document.getElementById('traineeSearchForm').style.display='block';
+        document.getElementById('traineeNotFound').style.display='none';
+        document.getElementById('traineeFound').style.display='none';
+        document.getElementById('traineeIdInput').value='';
         document.getElementById('traineeIdInput').focus();
-        appState.currentCertData = null;
+        appState.currentCertData=null;
     }
 
     function downloadCertificate() {
-        const c = appState.currentCertData;
-        if (!c) return;
-        if (c.driveFileId) {
-            window.open('https://drive.google.com/uc?export=download&id=' + c.driveFileId, '_blank');
-        } else if (c.fileData) {
-            const a = document.createElement('a');
-            a.href = 'data:' + c.fileType + ';base64,' + c.fileData;
-            a.download = 'شهادة_' + c.traineeName + '.' + (c.fileType === 'application/pdf' ? 'pdf' : 'png');
-            document.body.appendChild(a);
-            a.click();
-            a.remove();
-            showToast('جاري التحميل...', 'success');
-        }
+        var c=appState.currentCertData; if(!c)return;
+        if(c.driveFileId) window.open('https://drive.google.com/uc?export=download&id='+c.driveFileId,'_blank');
+        else if(c.fileData){var a=document.createElement('a');a.href='data:'+c.fileType+';base64,'+c.fileData;a.download='شهادة_'+c.traineeName+'.'+(c.fileType==='application/pdf'?'pdf':'png');document.body.appendChild(a);a.click();a.remove();showToast('جاري التحميل...','success');}
     }
 
     /* ================================
        الإعدادات
        ================================ */
     function saveSettings() {
-        let url = document.getElementById('scriptUrlInput').value.trim();
-        if (url) {
-            url = fixUrl(url);
-            APP_CONFIG.SCRIPT_URL = url;
-            localStorage.setItem('scriptUrl', url);
-            document.getElementById('scriptUrlInput').value = url;
-        }
-        const newPass = document.getElementById('newAdminPass').value;
-        if (newPass) {
-            APP_CONFIG.ADMIN_PASS = newPass;
-            localStorage.setItem('adminPass', newPass);
-        }
-        updateConnectionStatus();
-        showToast('تم حفظ الإعدادات', 'success');
-        document.getElementById('newAdminPass').value = '';
+        var url=document.getElementById('scriptUrlInput').value.trim();
+        if(url){url=cleanUrl(url);APP_CONFIG.SCRIPT_URL=url;localStorage.setItem('scriptUrl',url);document.getElementById('scriptUrlInput').value=url;}
+        var np=document.getElementById('newAdminPass').value;
+        if(np){APP_CONFIG.ADMIN_PASS=np;localStorage.setItem('adminPass',np);}
+        updateAllConnectionUI();
+        showToast('تم حفظ الإعدادات','success');
+        document.getElementById('newAdminPass').value='';
     }
 
-    async function testConnection() {
-        let url = document.getElementById('scriptUrlInput').value.trim();
-        if (!url || !url.includes('script.google.com')) {
-            showToast('أدخل رابط Apps Script صالح', 'error');
-            return;
-        }
-        url = fixUrl(url);
-        document.getElementById('scriptUrlInput').value = url;
-
-        showLoading();
-        document.getElementById('loadingText').textContent = 'جاري اختبار الاتصال...';
-        try {
-            const r = await fetch(url + '?action=ping', { redirect: 'follow' });
-            const d = await r.json();
+    function testConnection() {
+        var url=document.getElementById('scriptUrlInput').value.trim();
+        if(!url||url.indexOf('script.google.com')===-1){showToast('أدخل رابط صالح','error');return;}
+        url=cleanUrl(url);
+        document.getElementById('scriptUrlInput').value=url;
+        showLoading(); document.getElementById('loadingText').textContent='جاري اختبار الاتصال...';
+        var xhr=new XMLHttpRequest();
+        xhr.open('GET',url+'?action=ping',true);
+        xhr.onload=function(){
             hideLoading();
-            if (d.status === 'success') {
-                showToast('تم الاتصال بـ Google Drive بنجاح', 'success');
-                APP_CONFIG.SCRIPT_URL = url;
-                localStorage.setItem('scriptUrl', url);
-                updateConnectionStatus();
-                await refreshFromServer();
-            } else {
-                throw new Error(d.message);
-            }
-        } catch (e) {
-            hideLoading();
-            showToast('فشل الاتصال: ' + e.message, 'error');
-        }
+            try{
+                var d=JSON.parse(xhr.responseText);
+                if(d.status==='success'){
+                    APP_CONFIG.SCRIPT_URL=url;localStorage.setItem('scriptUrl',url);
+                    updateAllConnectionUI();showToast('تم الاتصال بنجاح','success');
+                    refreshFromServer();
+                } else throw new Error(d.message);
+            }catch(e){showToast('فشل: '+e.message,'error');}
+        };
+        xhr.onerror=function(){hideLoading();showToast('فشل الاتصال بالسيرفر','error');};
+        xhr.send();
     }
 
-    async function refreshFromServer() {
-        if (!isOnline()) return;
-        try {
-            const r = await fetch(fixUrl(APP_CONFIG.SCRIPT_URL) + '?action=list', { redirect: 'follow' });
-            const d = await r.json();
-            if (d.status === 'success' && d.certificates) {
-                appState.certificates = d.certificates;
-                saveLocalData();
-                refreshList();
-                updateStats();
-            }
-        } catch (e) {
-            console.error('فشل تحديث البيانات:', e);
-        }
+    function refreshFromServer() {
+        if(!isOnline())return Promise.resolve();
+        return serverGet('action=list').then(function(d){
+            if(d.status==='success'&&d.certificates){appState.certificates=d.certificates;saveLocalData();refreshList();updateStats();}
+        }).catch(function(e){console.error('فشل التحديث:',e);});
     }
 
-    /* ================================
-       حذف الكل
-       ================================ */
-    function showDeleteAllModal() {
-        document.getElementById('deleteAllModal').classList.add('active');
-    }
+    function showDeleteAllModal(){document.getElementById('deleteAllModal').classList.add('active');}
+    function deleteAllCertificates(){appState.certificates=[];saveLocalData();refreshList();updateStats();closeModal('deleteAllModal');showToast('تم حذف الكل','info');}
+    function closeModal(id){document.getElementById(id).classList.remove('active');}
+    function showLoading(){document.getElementById('loadingOverlay').classList.add('active');}
+    function hideLoading(){document.getElementById('loadingOverlay').classList.remove('active');}
 
-    function deleteAllCertificates() {
-        appState.certificates = [];
-        saveLocalData();
-        refreshList();
-        updateStats();
-        closeModal('deleteAllModal');
-        showToast('تم حذف جميع الشهادات المحلية', 'info');
+    function showToast(msg,type) {
+        type=type||'info';
+        var c=document.getElementById('toastContainer'),t=document.createElement('div');
+        t.className='toast '+type;
+        var icons={success:'fa-circle-check',error:'fa-circle-xmark',info:'fa-circle-info'};
+        t.innerHTML='<i class="fa-solid '+(icons[type]||icons.info)+'"></i><span>'+msg+'</span>';
+        c.appendChild(t);
+        setTimeout(function(){t.classList.add('removing');setTimeout(function(){t.remove();},300);},4000);
     }
+    function esc(t){var d=document.createElement('div');d.textContent=t||'';return d.innerHTML;}
 
-    /* ================================
-       أدوات مساعدة
-       ================================ */
-    function closeModal(id) {
-        document.getElementById(id).classList.remove('active');
-    }
-
-    function showLoading() {
-        document.getElementById('loadingOverlay').classList.add('active');
-    }
-
-    function hideLoading() {
-        document.getElementById('loadingOverlay').classList.remove('active');
-    }
-
-    function showToast(message, type) {
-        type = type || 'info';
-        const container = document.getElementById('toastContainer');
-        const toast = document.createElement('div');
-        toast.className = 'toast ' + type;
-        const icons = { success: 'fa-circle-check', error: 'fa-circle-xmark', info: 'fa-circle-info' };
-        toast.innerHTML = '<i class="fa-solid ' + (icons[type] || icons.info) + '"></i><span>' + message + '</span>';
-        container.appendChild(toast);
-        setTimeout(() => {
-            toast.classList.add('removing');
-            setTimeout(() => toast.remove(), 300);
-        }, 4000);
-    }
-
-    function esc(text) {
-        const div = document.createElement('div');
-        div.textContent = text || '';
-        return div.innerHTML;
-    }
-
-    /* إغلاق النوافذ المنبثقة */
-    document.addEventListener('click', e => {
-        if (e.target.classList.contains('modal-overlay')) e.target.classList.remove('active');
-    });
-    document.addEventListener('keydown', e => {
-        if (e.key === 'Escape') {
-            document.querySelectorAll('.modal-overlay.active').forEach(m => m.classList.remove('active'));
-        }
-    });
+    document.addEventListener('click',function(e){if(e.target.classList.contains('modal-overlay'))e.target.classList.remove('active');});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')document.querySelectorAll('.modal-overlay.active').forEach(function(m){m.classList.remove('active');});});
     </script>
 </body>
 </html>
